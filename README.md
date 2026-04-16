@@ -67,10 +67,11 @@ Request:
 
 Response:
 {
-  "payemtnId": 1,
-  "status": "SUCCESS",
-  "provider": "A"
+"payemtnId": 1,
+"status": "SUCCESS",
+"provider": "A"
 }
+
 ---
 
 ### Get Payment
