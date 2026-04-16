@@ -45,12 +45,39 @@ Database (H2)
 
 ## 📥 Installation
 
-1. Clone repository
-2. Open in STS / IntelliJ
-3. Run as Spring Boot Application
+1. Clone repository:
+   git clone <your-repo-url>
+   
+2. Open the project in Spring Tool Suite (STS)
+3. Import as Maven Project
+4. Let Maven download dependencies
+5. Build the project
+6. Run as Spring Boot Application
 
 ---
 
+## ▶️ Execution Guide
+ 
+1. Run the application:
+   Right-click project in STS → Run As → Spring Boot App
+ 
+2. Once started, application will run on:
+   http://localhost:8080
+ 
+3. Test APIs using Postman:
+ 
+### Create Payment
+POST http://localhost:8080/payments
+ 
+### Get Payment
+GET http://localhost:8080/payments/{id}
+ 
+4. Verify flow:
+- Payment is created
+- Routing happens (A/B provider)
+- Retry logic works if failure occurs
+- Idempotency prevents duplicate payments
+---
 ## ▶️ API Endpoints
 
 ### Create Payment
@@ -96,6 +123,18 @@ GET /payments/{id}
 * Routing Service → decides provider
 * Provider A/B → simulate processing
 * Database → stores payments
+
+---
+
+## 🧪 Test Strategy
+ 
+Test cases are documented in: TEST_CASES.md
+ 
+Test coverage includes:
+- Sanity Tests
+- Regression Tests
+- Integration Tests
+- Negative Tests
 
 ---
 
