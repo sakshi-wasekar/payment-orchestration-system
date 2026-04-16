@@ -65,6 +65,12 @@ Request:
 "idempotencyKey": "txn-123"
 }
 
+Response:
+{
+  "payemtnId": 1,
+  "status": "SUCCESS",
+  "provider": "A"
+}
 ---
 
 ### Get Payment
