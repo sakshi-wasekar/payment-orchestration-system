@@ -40,7 +40,7 @@ Database (H2)
 * Retry mechanism (3 attempts)
 * Idempotency handling
 * Payment status tracking
-
+* Supports idempotent transactions to prevent duplicates
 ---
 
 ## 📥 Installation
